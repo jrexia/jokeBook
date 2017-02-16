@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>JreXia笑话</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://oj3eoe0eo.bkt.clouddn.com/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://oj3eoe0eo.bkt.clouddn.com/swiper-3.4.1.min.css">
+    <link href="css/index.css" rel="stylesheet">
+</head>
+
+<body>
+    <!--导航部分开始-->
+    <div class="container-fluid">
+        <div class="row">
+            <a href="http://www.jrexia.cn/" class="col-xs-4 col-sm-4 col-md-4 col-lg-4">JreXia笑话</a>
+            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 nav-all ">
+                <a href="javascript::" class="active a1 nav-a">全部</a>
+                <a class="a2 nav-a" href="javascript::">视频</a>
+                <a class="a3 nav-a" href="javascript::">图片</a>
+                <a class="a4 nav-a" href="javascript::">段子</a>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!--导航部分结束-->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <!--百思不得姐笑话内容开始-->
+                <div class="container">
+                    <div class="right-content col-sm-10 col-md-10">
+                        <div id="app" class="commen">
+                            <ul class="row">
+                                <li v-for="item in items">
+                                    <div class="u-content">
+                                        <img src=" {{item.profile_image}}" alt="" class="u-logo">
+                                        <div class="u-text">
+                                            {{item.name}}
+                                        </div>
+                                        <span class="u-time">{{item.create_time}}</span>
+                                        <p class="text-content"><a href="">{{item.text}}</a></p>
+                                        <!--<span>{{item.channelName}}</span>-->
+                                    </div>
+                                    <template v-if=item.image0>
+                                <div id="vue" class="div-img">
+                                    <img class="img-responsive" src="{{item.image0}}" alt="抱歉服务器爆了，请刷新一下">
+                                </div>     
+                            </template>
+                                    <!--<template v-if=item.video_uri>
+                            
+                                 <video src="{{item.video_uri}}"  controls="controls" class="video-content"  data-setup="{}">
+                                     <source :src='item.video_uri' type="video/ogg" />
+                                     <source :src='item.video_uri' type="video/mp4" />
+                                 </video>
+                                
+                            </template>-->
+                                    <hr>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <!--百思不得姐笑话内容结束-->
+            </div>
+
+            <div class="swiper-slide a">
+                <!--百思不得姐视频内容开始-->
+                <div class="container">
+                    <div class="right-content col-sm-10 col-md-10">
+                        <div id="vvideo" class="commen">
+                            <ul class="row">
+                                <li v-for="item in items">
+                                    <template v-if=item.video_uri>
+                                    <div class="u-content">
+                                        <img src=" {{item.profile_image}}" alt="" class="u-logo">
+                                        <div class="u-text">
+                                            {{item.name}}
+                                        </div>
+                                        <span class="u-time">{{item.create_time}}</span>
+                                        <p class="text-content"><a href="">{{item.text}}</a></p>
+                                        <!--<span>{{item.channelName}}</span>-->
+                                    </div>
+                                    <!--<template v-if=item.image0>
+                                <div id="vue" class="div-img">
+                                    <img class="img-responsive" src="{{item.image0}}" alt="抱歉服务器爆了，请刷新一下">
+                                </div>     
+                            </template>-->
+
+
+                                    <video src="{{item.video_uri}}" controls preload="none" class="video-content" data-setup="{}">
+                                     <source :src='item.video_uri' type="video/ogg" />
+                                     <source :src='item.video_uri' type="video/mp4" />
+                                 </video>
+                                    <hr>
+                                    </template>
+
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <!--百思不得姐视频内容结束-->
+            </div>
+
+            <div class="swiper-slide">
+
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+    </div>
+
+
+
+    <script src="http://oj3eoe0eo.bkt.clouddn.com/jquery-1.9.1.js"></script>
+    <script src="http://oj3eoe0eo.bkt.clouddn.com/bootstrap.min.js"></script>
+    <script src="http://oj3eoe0eo.bkt.clouddn.com/vue.min.js"></script>
+    <script src="http://oj3eoe0eo.bkt.clouddn.com/swiper.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
